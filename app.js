@@ -5,15 +5,18 @@ const isDev = app.get('env') === 'development';
  
 app.set('views', __dirname + '/views');
 app.use(express.static('public'));
-app.locals.baseUrl = "http://localhost:3000"
 
 const njk = expressNunjucks(app, {
     watch: isDev,
-    noCache: isDev
+    noCache: isDev,
+    globals: {
+      baseUrl: "http://localhost:3000"
+    }
 });
  
+
 app.get('/', (req, res) => {
-    res.render('index.html', { baseUrl: req.app.locals.baseUrl, title: "Home2", username: "heyah"} );
+    res.render('index.html', { title: "Home2", username: "heyah"} );
 });
  
 app.listen(3000, function () {
