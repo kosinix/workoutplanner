@@ -4,13 +4,13 @@
 
 CLI:
 
-npm install
+`npm install`
 
 ## Starting and Stopping
 
 To start server with supervisor:
 
-.\node_modules\.bin\supervisor app.js
+`.\node_modules\.bin\supervisor app.js`
 
 To end process: 
 
@@ -22,13 +22,13 @@ CTRL+C
 
 CLI:
 
-npm install --production
+`npm install --production`
 
 ## Starting and Stopping
 
 Start:
 
-node app.js
+`node app.js`
 
 End:
 
